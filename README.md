@@ -1,5 +1,7 @@
 # railway-recruitment-parser
 
+[![Tests](https://github.com/tangwenhao783837/railway-recruitment-parser/actions/workflows/test.yml/badge.svg)](https://github.com/tangwenhao783837/railway-recruitment-parser/actions/workflows/test.yml)
+
 Parse real Chinese railway bureau campus-recruitment announcements
 (HTML pages as saved from the official sites) into structured JSON.
 
@@ -89,7 +91,7 @@ announced totals).
 ## Tests
 
 ```bash
-python3 tests/test_parser.py
+python -m unittest discover -s tests
 ```
 
 Checks the parsed output against the headcounts published in the
