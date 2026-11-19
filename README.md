@@ -24,6 +24,23 @@ python3 parser.py samples/*.txt
 
 No third-party dependencies — Python 3 standard library only.
 
+## Product layer
+
+- `app/main.py` — FastAPI backend wrapping the parser:
+  `GET /health`, `GET /bureaus`, `GET /announcements/{bureau}`,
+  `POST /parse`, and a frontend at `GET /` (pick a bureau, see the
+  parsed posts, deadlines and power-supply breakdown). Run it with
+  `pip install -r requirements.txt && uvicorn app.main:app`.
+- `bot/workflow.py` — the scheduled Devin-bot workflow. The official
+  announcement pages are JavaScript-rendered, so the bot fetches each
+  page with its own browser and saves the raw text; this script then
+  parses new announcements, opens an automated PR with the new sample +
+  output JSON, posts a Slack alert with the summary, and auto-generates
+  candidate matches for the configured profile
+  (`bot/workflow.py --dry-run --text-file samples/wuhan_2027_dazhuan.txt`).
+  Credentials (`GITHUB_TOKEN`, `GITHUB_REPO`, `SLACK_WEBHOOK_URL`)
+  come from the environment.
+
 ## Samples
 
 - `samples/nanchang_2027_dazhuan.txt` — 中国铁路南昌局集团有限公司
@@ -78,4 +95,4 @@ python3 tests/test_parser.py
 Checks the parsed output against the headcounts published in the
 announcements (Nanchang 1352 / Taiyuan 877 / Wuhan 1055) and the
 power-supply post totals (Nanchang 76 / Taiyuan 65 / Wuhan 150).
-18 tests, all passing.
+28 tests, all passing (parser + API + workflow).
