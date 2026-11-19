@@ -32,6 +32,9 @@ No third-party dependencies — Python 3 standard library only.
 - `samples/taiyuan_2027_dazhuan.txt` — 中国铁路太原局集团有限公司
   2027年招聘高校毕业生公告（二）,大专批 (source:
   https://www.crtyhr.com — 太铁招聘)
+- `samples/wuhan_2027_dazhuan.txt` — 中国铁路武汉局集团有限公司
+  2027年招聘高校毕业生公告（二）,大专批 (source:
+  https://rczp.china-railway.com.cn — 中国铁路人才招聘网)
 
 ## Sample output
 
@@ -58,7 +61,12 @@ No third-party dependencies — Python 3 standard library only.
 
 Taiyuan parses the same way: 877人 / 10岗 / 报名 2026-11-19 至 11-30 /
 流程含考试考核 / 供电 65人 / 铁道供电技术可报 480人.
-`totals_match` is true for both samples (row headcounts sum to the
+Wuhan parses the same way: 1055人 / 10岗 / 报名 2026-11-18 至 11-30 /
+流程 网上报名→网上资格审查与筛选→网上测评→资格复审→考试考核→公示录用 /
+供电 150人 / 铁道供电技术可报 150人. Its post table uses a different
+layout (labelled `岗位编码/岗位名称/人数/学历/专业要求/单位/备注`
+fields separated by `；`), which the parser also handles.
+`totals_match` is true for all three samples (row headcounts sum to the
 announced totals).
 
 ## Tests
@@ -68,5 +76,6 @@ python3 tests/test_parser.py
 ```
 
 Checks the parsed output against the headcounts published in the
-announcements (Nanchang 1352 / Taiyuan 877) and the power-supply
-post totals (Nanchang 76 / Taiyuan 65).
+announcements (Nanchang 1352 / Taiyuan 877 / Wuhan 1055) and the
+power-supply post totals (Nanchang 76 / Taiyuan 65 / Wuhan 150).
+18 tests, all passing.

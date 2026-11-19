@@ -9,6 +9,13 @@ Input: plain-text files holding one announcement each (title, body and the
 post table, as copied from the official announcement page).
 Output: one JSON file per input, written to the output directory.
 Standard library only.
+
+The parser handles the row layouts seen across bureaus:
+- comma-separated rows with '专业要求：…' / '工作单位：…' markers
+  (Nanchang, Taiyuan), including '专业要求与第N行相同' cross-references;
+- labelled rows with '岗位编码/岗位名称/人数/学历/专业要求/单位/备注'
+  fields separated by '；' (Wuhan, and other bureaus whose post table is
+  an embedded HTML table).
 """
 
 from __future__ import annotations
@@ -19,13 +26,20 @@ import re
 import sys
 from pathlib import Path
 
-STEP_NAMES = ("网上报名", "资格审查", "面试考核", "考试考核", "公示录用")
-ROW_START = re.compile(r"(?m)^(\d+)．")
+# Longest first: '网上资格审查与筛选' must win over '资格审查'.
+STEP_PATTERNS = (
+    "网上资格审查与筛选",
+    "网上报名",
+    "网上测评",
+    "资格复审",
+    "资格审查",
+    "面试考核",
+    "考试考核",
+    "公示录用",
+)
+ROW_START = re.compile(r"(?m)^(\d+)[．.]\s*")
 CODE_RE = re.compile(r"^\s*([A-Z]{2,}\d+|\d{8})")
-
-
-def _clean(text: str) -> str:
-    return re.sub(r"\s+", " ", text).strip()
+ROW_LABELS = ("岗位编码", "岗位名称", "人数", "学历", "专业要求", "单位", "备注")
 
 
 def _parse_majors(text: str) -> list[str]:
@@ -51,16 +65,40 @@ def _parse_units(text: str) -> list[dict]:
     return units
 
 
-def _parse_row(chunk: str) -> dict:
-    """Parse one post-table row.
+def _parse_labeled_row(chunk: str) -> dict:
+    """Parse a row whose fields are labelled, e.g. '岗位编码WHJ…；岗位名称：…；
+    人数170人；学历：大专(高职)；专业要求：…；单位：…；备注：无。'"""
+    fields: dict[str, str] = {}
+    for part in chunk.split("；"):
+        part = part.strip()
+        for label in ROW_LABELS:
+            if part.startswith(label):
+                fields[label] = part[len(label):].strip("：: ").strip().rstrip("。")
+                break
+    headcount = None
+    hm = re.search(r"(\d+)", fields.get("人数", ""))
+    if hm:
+        headcount = int(hm.group(1))
+    remarks = fields.get("备注")
+    if remarks in (None, "", "无", "（空）"):
+        remarks = None
+    return {
+        "code": fields.get("岗位编码"),
+        "title": fields.get("岗位名称"),
+        "headcount": headcount,
+        "majors": _parse_majors(fields.get("专业要求", "")),
+        "units": _parse_units(fields.get("单位", "")),
+        "remarks": remarks,
+        "_majors_ref": None,
+    }
 
-    Handles both row layouts seen in the wild:
-    - 'NCJ20270201，铁路车务操作技能岗位，289人。专业要求：...。工作单位：...'
-    - '27230201，铁路机务乘务，大专，283人，备注：适宜男生。专业要求：...。工作地点：...'
-    and '专业要求与第N行相同' cross-references (with or without the list
-    spelled out again in parentheses).
-    """
+
+def _parse_row(chunk: str) -> dict:
+    """Parse one post-table row (either layout)."""
     chunk = chunk.strip()
+    if "岗位编码" in chunk or "岗位名称" in chunk:
+        return _parse_labeled_row(chunk)
+
     m = CODE_RE.match(chunk)
     code = m.group(1) if m else None
     rest = chunk[m.end():] if m else chunk
@@ -85,7 +123,7 @@ def _parse_row(chunk: str) -> dict:
             majors = _parse_majors(raw)
 
     units: list[dict] = []
-    um = re.search(r"工作(?:单位|地点)[:：]\s*(.+?)(?:。|$)", rest, re.S)
+    um = re.search(r"(?:工作单位|工作地点|单位)[:：]\s*(.+?)(?:。|；|$)", rest, re.S)
     if um:
         units = _parse_units(um.group(1))
 
@@ -123,7 +161,7 @@ def _parse_table(table_text: str) -> list[dict]:
 
 def _parse_window(text: str) -> dict | None:
     m = re.search(
-        r"报名时间[：为]?\s*(\d{4})年(\d{1,2})月(\d{1,2})日至(\d{1,2})月(\d{1,2})日",
+        r"报名时间[：为]?\s*(\d{4})年(\d{1,2})月(\d{1,2})日(?:至|-)(\d{1,2})月(\d{1,2})日",
         text,
     )
     if not m:
@@ -138,14 +176,34 @@ def _parse_window(text: str) -> dict | None:
 def _parse_process(text: str) -> list[str]:
     section = re.search(r"招聘流程[:：]?(.*?)(?:四、|$)", text, re.S)
     haystack = section.group(1) if section else text
-    steps: list[str] = []
-    for m in re.finditer(
-        r"(?:\d+．|（[一二三四五]）)\s*(网上报名|资格审查|面试考核|考试考核|公示录用)",
-        haystack,
-    ):
+    # Prefer the summary sentence ('按网上报名、…、公示录用等环节进行').
+    intro = re.search(r"按(.+?)等环节进行", haystack)
+    if intro:
+        steps: list[str] = []
+        for name in re.split(r"[、，]", intro.group(1)):
+            name = name.strip()
+            if name in STEP_PATTERNS and name not in steps:
+                steps.append(name)
+        if steps:
+            return steps
+    # Fallback: step names heading numbered items (avoids matching the same
+    # words when they appear inside a step's description).
+    pattern = r"(?:\d+[．.]|（[一二三四五]）)\s*(" + "|".join(STEP_PATTERNS) + ")"
+    steps = []
+    for m in re.finditer(pattern, haystack):
         if m.group(1) not in steps:
             steps.append(m.group(1))
     return steps
+
+
+def _parse_education(text: str) -> str | None:
+    if re.search(r"大专（高职）|大专\(高职\)|高职（大专）", text):
+        return "大专（高职）"
+    if re.search(r"本科及以上", text):
+        return "本科及以上"
+    if "本科" in text:
+        return "本科"
+    return None
 
 
 def parse_announcement(text: str, major: str = "铁道供电技术") -> dict:
@@ -156,7 +214,6 @@ def parse_announcement(text: str, major: str = "铁道供电技术") -> dict:
     bureau = bureau_m.group(1) if bureau_m else None
     bureau_full = re.search(r"(中国铁路.+?集团有限公司)", title)
     no_m = re.search(r"(公告（[一二三]）)", title)
-    edu_m = re.search(r"(大专（高职）|本科及以上|本科)", title)
     src_m = re.search(r"来源[:：]\s*(https?://\S+)", text)
 
     total_m = re.search(r"本次计划招聘(\d+)人", text)
@@ -164,11 +221,10 @@ def parse_announcement(text: str, major: str = "铁道供电技术") -> dict:
     window = _parse_window(text)
     steps = _parse_process(text)
     phone_m = re.search(r"咨询电话[:：]?\s*(\d{3,4}-\d{7,8})", text)
+    education = _parse_education(text)
 
     table_text = text.split("岗位信息表：", 1)[1] if "岗位信息表：" in text else ""
     rows = _parse_table(table_text) if table_text else []
-    education = edu_m.group(1) if edu_m else None
-    # Rebuild rows in a stable key order.
     rows = [
         {
             "code": r["code"],
