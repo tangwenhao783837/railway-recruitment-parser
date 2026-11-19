@@ -1,0 +1,533 @@
+{
+  "bureau": "南昌局",
+  "bureau_full_name": "中国铁路南昌局集团有限公司",
+  "title": "中国铁路南昌局集团有限公司2027年度招聘大专（高职）毕业生公告（二）",
+  "announcement_no": "公告（二）",
+  "education_level": "大专（高职）",
+  "total_posts": 11,
+  "total_headcount": 1352,
+  "row_headcount_sum": 1352,
+  "totals_match": true,
+  "application_window": {
+    "start": "2026-11-16",
+    "end": "2026-12-20"
+  },
+  "process": [
+    "网上报名",
+    "资格审查",
+    "面试考核",
+    "公示录用"
+  ],
+  "has_written_exam": false,
+  "one_post_limit": true,
+  "birthplace_priority": true,
+  "contact_phone": "0791-87021951",
+  "source_url": "https://rczp.china-railway.com.cn/page/platform/company_info_del.html?parentId=381&jmetazpxxid=11363",
+  "posts": [
+    {
+      "code": "NCJ20270201",
+      "title": "铁路车务操作技能岗位",
+      "headcount": 289,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道交通运营管理",
+        "城市轨道交通运营管理",
+        "铁道工程技术",
+        "铁道信号自动控制",
+        "铁道车辆技术",
+        "铁道供电技术"
+      ],
+      "units": [
+        {
+          "unit": "南昌车站",
+          "headcount": 3
+        },
+        {
+          "unit": "向塘西车站",
+          "headcount": 20
+        },
+        {
+          "unit": "鹰潭车站",
+          "headcount": 25
+        },
+        {
+          "unit": "福州车站",
+          "headcount": 3
+        },
+        {
+          "unit": "厦门车站",
+          "headcount": 3
+        },
+        {
+          "unit": "南昌车务段",
+          "headcount": 22
+        },
+        {
+          "unit": "九江车务段",
+          "headcount": 20
+        },
+        {
+          "unit": "上饶车务段",
+          "headcount": 20
+        },
+        {
+          "unit": "宜春车务段",
+          "headcount": 38
+        },
+        {
+          "unit": "赣州车务段",
+          "headcount": 20
+        },
+        {
+          "unit": "福州车务段",
+          "headcount": 18
+        },
+        {
+          "unit": "南平车务段",
+          "headcount": 22
+        },
+        {
+          "unit": "永安车务段",
+          "headcount": 20
+        },
+        {
+          "unit": "漳州车务段",
+          "headcount": 45
+        },
+        {
+          "unit": "龙岩车务段",
+          "headcount": 10
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "NCJ20270202",
+      "title": "铁路客运操作技能岗位",
+      "headcount": 35,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道交通运营管理",
+        "城市轨道交通运营管理",
+        "高速铁路客运服务"
+      ],
+      "units": [
+        {
+          "unit": "南昌车站",
+          "headcount": 14
+        },
+        {
+          "unit": "九江车务段",
+          "headcount": 6
+        },
+        {
+          "unit": "赣州车务段",
+          "headcount": 10
+        },
+        {
+          "unit": "漳州车务段",
+          "headcount": 5
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "NCJ20270203",
+      "title": "铁路货运操作技能岗位",
+      "headcount": 30,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道交通运营管理",
+        "城市轨道交通运营管理",
+        "铁路物流管理",
+        "集装箱运输管理"
+      ],
+      "units": [
+        {
+          "unit": "南昌铁路物流中心",
+          "headcount": 17
+        },
+        {
+          "unit": "福州铁路物流中心",
+          "headcount": 11
+        },
+        {
+          "unit": "南平车务段",
+          "headcount": 2
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "NCJ20270204",
+      "title": "铁路机务乘务操作技能岗位",
+      "headcount": 500,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道机车运用与维护",
+        "铁道机车车辆制造与维护",
+        "铁道车辆技术",
+        "动车组检修技术",
+        "高速铁路动车组制造与维护",
+        "铁道供电技术",
+        "机械设计与制造",
+        "机电一体化技术",
+        "机电设备技术",
+        "电气自动化技术",
+        "城市轨道车辆应用技术",
+        "城市轨道交通机电技术"
+      ],
+      "units": [
+        {
+          "unit": "南昌机务段",
+          "headcount": 112
+        },
+        {
+          "unit": "向塘机务段",
+          "headcount": 150
+        },
+        {
+          "unit": "鹰潭机务段",
+          "headcount": 78
+        },
+        {
+          "unit": "福州机务段",
+          "headcount": 160
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "NCJ20270205",
+      "title": "铁路机务检修操作技能岗位",
+      "headcount": 25,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道机车运用与维护",
+        "铁道机车车辆制造与维护",
+        "铁道车辆技术",
+        "动车组检修技术",
+        "高速铁路动车组制造与维护",
+        "铁道供电技术",
+        "机械设计与制造",
+        "机电一体化技术",
+        "机电设备技术",
+        "电气自动化技术",
+        "城市轨道车辆应用技术",
+        "城市轨道交通机电技术"
+      ],
+      "units": [
+        {
+          "unit": "南昌机务段",
+          "headcount": 4
+        },
+        {
+          "unit": "向塘机务段",
+          "headcount": 2
+        },
+        {
+          "unit": "鹰潭机务段",
+          "headcount": 5
+        },
+        {
+          "unit": "福州机务段",
+          "headcount": 14
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "NCJ20270206",
+      "title": "铁路工务操作技能岗位",
+      "headcount": 222,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道工程技术",
+        "铁道桥梁隧道工程技术",
+        "高速铁路施工与维护",
+        "高速铁路综合维修技术",
+        "城市轨道交通工程技术",
+        "道路与桥梁工程技术",
+        "地下与隧道工程技术"
+      ],
+      "units": [
+        {
+          "unit": "南昌工务段",
+          "headcount": 15
+        },
+        {
+          "unit": "南昌高铁基础设施段",
+          "headcount": 1
+        },
+        {
+          "unit": "九江桥工段",
+          "headcount": 47
+        },
+        {
+          "unit": "鹰潭工务段",
+          "headcount": 27
+        },
+        {
+          "unit": "萍乡工务段",
+          "headcount": 14
+        },
+        {
+          "unit": "赣州工务段",
+          "headcount": 31
+        },
+        {
+          "unit": "福州工务段",
+          "headcount": 8
+        },
+        {
+          "unit": "厦门工务段",
+          "headcount": 46
+        },
+        {
+          "unit": "南平工务段",
+          "headcount": 16
+        },
+        {
+          "unit": "永安工务段",
+          "headcount": 2
+        },
+        {
+          "unit": "龙岩工务段",
+          "headcount": 10
+        },
+        {
+          "unit": "鹰潭工务机械段",
+          "headcount": 5
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "NCJ20270207",
+      "title": "铁路电务操作技能岗位",
+      "headcount": 50,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道信号自动控制",
+        "城市轨道交通通信信号技术",
+        "电子信息工程技术"
+      ],
+      "units": [
+        {
+          "unit": "南昌电务段",
+          "headcount": 23
+        },
+        {
+          "unit": "福州电务段",
+          "headcount": 21
+        },
+        {
+          "unit": "南昌高铁基础设施段",
+          "headcount": 6
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "NCJ20270208",
+      "title": "铁路动客车检修操作技能岗位",
+      "headcount": 44,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道车辆技术",
+        "动车组检修技术",
+        "高速铁路动车组制造与维护",
+        "城市轨道车辆应用技术"
+      ],
+      "units": [
+        {
+          "unit": "南昌车辆段",
+          "headcount": 18
+        },
+        {
+          "unit": "福州动车段",
+          "headcount": 26
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "NCJ20270209",
+      "title": "铁路供电操作技能岗位",
+      "headcount": 76,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道供电技术",
+        "城市轨道交通供配电技术",
+        "电气自动化技术"
+      ],
+      "units": [
+        {
+          "unit": "南昌供电段",
+          "headcount": 22
+        },
+        {
+          "unit": "鹰潭供电段",
+          "headcount": 2
+        },
+        {
+          "unit": "福州供电段",
+          "headcount": 40
+        },
+        {
+          "unit": "厦门供电段",
+          "headcount": 12
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "NCJ20270210",
+      "title": "铁路房建操作技能岗位",
+      "headcount": 30,
+      "education": "大专（高职）",
+      "majors": [
+        "建筑工程技术",
+        "给排水工程技术",
+        "机电一体化技术",
+        "机电设备技术"
+      ],
+      "units": [
+        {
+          "unit": "南昌房建公寓段",
+          "headcount": 20
+        },
+        {
+          "unit": "福州房建公寓段",
+          "headcount": 10
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "NCJ20270211",
+      "title": "铁路工程机械操作技能岗位",
+      "headcount": 51,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道养路机械应用技术",
+        "智能工程机械运用技术",
+        "机械设计与制造",
+        "机电一体化技术",
+        "机电设备技术",
+        "城市轨道交通机电技术"
+      ],
+      "units": [
+        {
+          "unit": "南昌工务段",
+          "headcount": 4
+        },
+        {
+          "unit": "南昌高铁基础设施段",
+          "headcount": 2
+        },
+        {
+          "unit": "九江桥工段",
+          "headcount": 4
+        },
+        {
+          "unit": "鹰潭工务段",
+          "headcount": 5
+        },
+        {
+          "unit": "萍乡工务段",
+          "headcount": 2
+        },
+        {
+          "unit": "赣州工务段",
+          "headcount": 5
+        },
+        {
+          "unit": "福州工务段",
+          "headcount": 2
+        },
+        {
+          "unit": "厦门工务段",
+          "headcount": 4
+        },
+        {
+          "unit": "南平工务段",
+          "headcount": 3
+        },
+        {
+          "unit": "永安工务段",
+          "headcount": 2
+        },
+        {
+          "unit": "龙岩工务段",
+          "headcount": 2
+        },
+        {
+          "unit": "鹰潭工务机械段",
+          "headcount": 2
+        },
+        {
+          "unit": "南昌供电段",
+          "headcount": 4
+        },
+        {
+          "unit": "鹰潭供电段",
+          "headcount": 1
+        },
+        {
+          "unit": "福州供电段",
+          "headcount": 6
+        },
+        {
+          "unit": "厦门供电段",
+          "headcount": 3
+        }
+      ],
+      "remarks": null
+    }
+  ],
+  "power_supply": {
+    "post_count": 1,
+    "headcount": 76,
+    "posts": [
+      {
+        "code": "NCJ20270209",
+        "title": "铁路供电操作技能岗位",
+        "headcount": 76
+      }
+    ],
+    "units": {
+      "南昌供电段": 22,
+      "鹰潭供电段": 2,
+      "福州供电段": 40,
+      "厦门供电段": 12
+    }
+  },
+  "eligible_for_major": {
+    "major": "铁道供电技术",
+    "post_count": 4,
+    "total_headcount": 890,
+    "posts": [
+      {
+        "code": "NCJ20270201",
+        "title": "铁路车务操作技能岗位",
+        "headcount": 289
+      },
+      {
+        "code": "NCJ20270204",
+        "title": "铁路机务乘务操作技能岗位",
+        "headcount": 500
+      },
+      {
+        "code": "NCJ20270205",
+        "title": "铁路机务检修操作技能岗位",
+        "headcount": 25
+      },
+      {
+        "code": "NCJ20270209",
+        "title": "铁路供电操作技能岗位",
+        "headcount": 76
+      }
+    ]
+  }
+}
