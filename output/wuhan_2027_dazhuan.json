@@ -1,0 +1,424 @@
+{
+  "bureau": "武汉局",
+  "bureau_full_name": "中国铁路武汉局集团有限公司",
+  "title": "中国铁路武汉局集团有限公司2027年招聘高校毕业生公告（二）",
+  "announcement_no": "公告（二）",
+  "education_level": "大专（高职）",
+  "total_posts": 10,
+  "total_headcount": 1055,
+  "row_headcount_sum": 1055,
+  "totals_match": true,
+  "application_window": {
+    "start": "2026-11-18",
+    "end": "2026-11-30"
+  },
+  "process": [
+    "网上报名",
+    "网上资格审查与筛选",
+    "网上测评",
+    "资格复审",
+    "考试考核",
+    "公示录用"
+  ],
+  "has_written_exam": true,
+  "one_post_limit": true,
+  "birthplace_priority": true,
+  "contact_phone": "027-51122511",
+  "source_url": "https://rczp.china-railway.com.cn/page/platform/company_info_del.html?parentId=324&jmetazpxxid=11385",
+  "posts": [
+    {
+      "code": "WHJ2027YS0201",
+      "title": "车务站段运输组织操作技能岗",
+      "headcount": 170,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道交通运营管理",
+        "城市轨道交通运营管理",
+        "铁路物流管理",
+        "铁道机车运用与维护",
+        "铁道车辆技术"
+      ],
+      "units": [
+        {
+          "unit": "武汉北车站",
+          "headcount": 45
+        },
+        {
+          "unit": "汉口车站",
+          "headcount": 10
+        },
+        {
+          "unit": "武汉车站",
+          "headcount": 16
+        },
+        {
+          "unit": "襄阳北车站",
+          "headcount": 28
+        },
+        {
+          "unit": "襄阳车站",
+          "headcount": 3
+        },
+        {
+          "unit": "麻城车务段",
+          "headcount": 5
+        },
+        {
+          "unit": "武昌车务段",
+          "headcount": 28
+        },
+        {
+          "unit": "汉西车务段",
+          "headcount": 13
+        },
+        {
+          "unit": "十堰车务段",
+          "headcount": 12
+        },
+        {
+          "unit": "襄州运营维修段",
+          "headcount": 10
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "WHJ2027KY0201",
+      "title": "车务站段客运组织操作技能岗",
+      "headcount": 38,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道交通运营管理",
+        "城市轨道交通运营管理"
+      ],
+      "units": [
+        {
+          "unit": "汉口车站",
+          "headcount": 5
+        },
+        {
+          "unit": "武汉车站",
+          "headcount": 5
+        },
+        {
+          "unit": "麻城车务段",
+          "headcount": 2
+        },
+        {
+          "unit": "武昌车务段",
+          "headcount": 4
+        },
+        {
+          "unit": "汉西车务段",
+          "headcount": 4
+        },
+        {
+          "unit": "宜昌车务段",
+          "headcount": 5
+        },
+        {
+          "unit": "十堰车务段",
+          "headcount": 3
+        },
+        {
+          "unit": "武汉客运段",
+          "headcount": 5
+        },
+        {
+          "unit": "襄阳客运段",
+          "headcount": 5
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "WHJ2027HY0201",
+      "title": "铁路货运组织操作技能岗",
+      "headcount": 45,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道交通运营管理",
+        "城市轨道交通运营管理",
+        "铁路物流管理"
+      ],
+      "units": [
+        {
+          "unit": "武汉北车站",
+          "headcount": 4
+        },
+        {
+          "unit": "襄阳北车站",
+          "headcount": 4
+        },
+        {
+          "unit": "武汉铁路物流中心（武汉武铁物流发展有限公司）",
+          "headcount": 37
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "WHJ2027CW0201",
+      "title": "机车乘务操作技能岗",
+      "headcount": 161,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道机车运用与维护",
+        "铁道车辆技术",
+        "城市轨道车辆应用技术",
+        "动车组检修技术"
+      ],
+      "units": [
+        {
+          "unit": "江岸机务段",
+          "headcount": 80
+        },
+        {
+          "unit": "武昌南机务段",
+          "headcount": 15
+        },
+        {
+          "unit": "襄阳机务段",
+          "headcount": 66
+        }
+      ],
+      "remarks": "适宜男性，身体条件符合《铁路机车车辆驾驶人员健康检查规范》"
+    },
+    {
+      "code": "WHJ2027JL0201",
+      "title": "机辆运用维修操作技能岗",
+      "headcount": 128,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道车辆技术",
+        "城市轨道车辆应用技术",
+        "动车组检修技术",
+        "铁道信号自动控制",
+        "铁道通信与信息化技术"
+      ],
+      "units": [
+        {
+          "unit": "江岸机务段",
+          "headcount": 6
+        },
+        {
+          "unit": "襄阳机务段",
+          "headcount": 8
+        },
+        {
+          "unit": "武汉大功率机车检修段",
+          "headcount": 19
+        },
+        {
+          "unit": "江岸车辆段",
+          "headcount": 64
+        },
+        {
+          "unit": "襄阳车辆段",
+          "headcount": 14
+        },
+        {
+          "unit": "武昌客车车辆段",
+          "headcount": 7
+        },
+        {
+          "unit": "金鹰重型工程机械股份有限公司",
+          "headcount": 10
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "WHJ2027GW0201",
+      "title": "工务线路检修与维护操作技能岗",
+      "headcount": 213,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道工程技术",
+        "城市轨道交通工程技术",
+        "高速铁路施工与维护",
+        "铁道桥梁隧道工程技术",
+        "测绘工程技术",
+        "铁道养路机械应用技术",
+        "高速铁路综合维修技术"
+      ],
+      "units": [
+        {
+          "unit": "麻城工务段",
+          "headcount": 23
+        },
+        {
+          "unit": "武汉桥工段",
+          "headcount": 35
+        },
+        {
+          "unit": "襄阳工务段",
+          "headcount": 77
+        },
+        {
+          "unit": "武汉工务大修段",
+          "headcount": 10
+        },
+        {
+          "unit": "武汉大型养路机械运用检修段",
+          "headcount": 8
+        },
+        {
+          "unit": "武汉高铁基础设施段",
+          "headcount": 20
+        },
+        {
+          "unit": "宜昌综合维修段",
+          "headcount": 28
+        },
+        {
+          "unit": "襄州运营维修段",
+          "headcount": 7
+        },
+        {
+          "unit": "金鹰重型工程机械股份有限公司",
+          "headcount": 5
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "WHJ2027XH0201",
+      "title": "信号设备检修与维护操作技能岗",
+      "headcount": 84,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道信号自动控制",
+        "城市轨道交通通信信号技术",
+        "轨道交通通信信号设备制造与维护",
+        "高速铁路综合维修技术"
+      ],
+      "units": [
+        {
+          "unit": "武汉电务段",
+          "headcount": 28
+        },
+        {
+          "unit": "襄阳电务段",
+          "headcount": 28
+        },
+        {
+          "unit": "武汉高铁基础设施段",
+          "headcount": 18
+        },
+        {
+          "unit": "宜昌综合维修段",
+          "headcount": 4
+        },
+        {
+          "unit": "襄州运营维修段",
+          "headcount": 6
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "WHJ2027TX0201",
+      "title": "通信设备检修与维护操作技能岗",
+      "headcount": 29,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道通信与信息化技术"
+      ],
+      "units": [
+        {
+          "unit": "武汉通信段",
+          "headcount": 29
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "WHJ2027GD0201",
+      "title": "供电设备检修与维护操作技能岗",
+      "headcount": 150,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道供电技术",
+        "城市轨道交通供配电技术",
+        "电气自动化技术",
+        "高速铁路综合维修技术",
+        "机电设备技术",
+        "机电一体化技术"
+      ],
+      "units": [
+        {
+          "unit": "襄阳供电段",
+          "headcount": 83
+        },
+        {
+          "unit": "武汉高铁基础设施段",
+          "headcount": 53
+        },
+        {
+          "unit": "宜昌综合维修段",
+          "headcount": 10
+        },
+        {
+          "unit": "襄州运营维修段",
+          "headcount": 4
+        }
+      ],
+      "remarks": null
+    },
+    {
+      "code": "WHJ2027FJ0201",
+      "title": "房建维修操作技能岗",
+      "headcount": 37,
+      "education": "大专（高职）",
+      "majors": [
+        "铁道工程技术",
+        "高速铁路综合维修技术",
+        "土木工程检测技术",
+        "机电设备技术",
+        "机电一体化技术",
+        "城市轨道交通机电技术"
+      ],
+      "units": [
+        {
+          "unit": "武汉房建生活段",
+          "headcount": 15
+        },
+        {
+          "unit": "襄阳房建生活段",
+          "headcount": 22
+        }
+      ],
+      "remarks": null
+    }
+  ],
+  "power_supply": {
+    "post_count": 1,
+    "headcount": 150,
+    "posts": [
+      {
+        "code": "WHJ2027GD0201",
+        "title": "供电设备检修与维护操作技能岗",
+        "headcount": 150
+      }
+    ],
+    "units": {
+      "襄阳供电段": 83,
+      "武汉高铁基础设施段": 53,
+      "宜昌综合维修段": 10,
+      "襄州运营维修段": 4
+    }
+  },
+  "eligible_for_major": {
+    "major": "铁道供电技术",
+    "post_count": 1,
+    "total_headcount": 150,
+    "posts": [
+      {
+        "code": "WHJ2027GD0201",
+        "title": "供电设备检修与维护操作技能岗",
+        "headcount": 150
+      }
+    ]
+  }
+}

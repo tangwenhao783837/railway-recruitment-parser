@@ -3,7 +3,7 @@
   "bureau_full_name": "中国铁路太原局集团有限公司",
   "title": "中国铁路太原局集团有限公司2027年招聘高校毕业生公告（二）",
   "announcement_no": "公告（二）",
-  "education_level": null,
+  "education_level": "大专（高职）",
   "total_posts": 10,
   "total_headcount": 877,
   "row_headcount_sum": 877,
@@ -28,7 +28,7 @@
       "code": "27230101",
       "title": "铁路车务运输组织",
       "headcount": 115,
-      "education": null,
+      "education": "大专（高职）",
       "majors": [
         "铁道交通运营管理",
         "交通运营管理",
@@ -80,7 +80,7 @@
       "code": "27230102",
       "title": "铁路客运组织",
       "headcount": 13,
-      "education": null,
+      "education": "大专（高职）",
       "majors": [
         "铁道交通运营管理",
         "交通运营管理",
@@ -103,7 +103,7 @@
       "code": "27230103",
       "title": "铁路货物运输",
       "headcount": 45,
-      "education": null,
+      "education": "大专（高职）",
       "majors": [
         "铁道交通运营管理",
         "交通运营管理",
@@ -131,7 +131,7 @@
       "code": "27230201",
       "title": "铁路机务乘务",
       "headcount": 283,
-      "education": null,
+      "education": "大专（高职）",
       "majors": [
         "铁道机车运用与维护",
         "铁道车辆技术",
@@ -192,7 +192,7 @@
       "code": "27230301",
       "title": "铁路车辆运用检修",
       "headcount": 132,
-      "education": null,
+      "education": "大专（高职）",
       "majors": [
         "铁道机车运用与维护",
         "铁道车辆技术",
@@ -257,7 +257,7 @@
       "code": "27230401",
       "title": "铁路工务设备设施检修维护",
       "headcount": 95,
-      "education": null,
+      "education": "大专（高职）",
       "majors": [
         "铁道工程技术",
         "土木工程检测技术",
@@ -315,7 +315,7 @@
       "code": "27230501",
       "title": "铁路信号设备设施检修维护",
       "headcount": 89,
-      "education": null,
+      "education": "大专（高职）",
       "majors": [
         "铁道信号自动控制",
         "高速铁路综合维修技术",
@@ -352,7 +352,7 @@
       "code": "27230601",
       "title": "铁路通信设备设施检修维护",
       "headcount": 30,
-      "education": null,
+      "education": "大专（高职）",
       "majors": [
         "现代通信技术",
         "铁道通信与信息化技术",
@@ -376,7 +376,7 @@
       "code": "27230701",
       "title": "铁路供电设备设施检修维护",
       "headcount": 65,
-      "education": null,
+      "education": "大专（高职）",
       "majors": [
         "铁道供电技术",
         "供用电技术",
@@ -410,7 +410,7 @@
       "code": "27230801",
       "title": "铁路房建设备设施检修维护",
       "headcount": 10,
-      "education": null,
+      "education": "大专（高职）",
       "majors": [
         "建筑工程技术",
         "建筑设备工程技术",
