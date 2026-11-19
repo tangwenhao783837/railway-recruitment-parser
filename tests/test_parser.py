@@ -121,5 +121,57 @@ class TestTaiyuan(unittest.TestCase):
                 self.assertEqual(sum(known), row["headcount"], row["code"])
 
 
+class TestWuhan(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.d = load("wuhan_2027_dazhuan.txt")
+
+    def test_totals(self):
+        self.assertEqual(self.d["bureau"], "武汉局")
+        self.assertEqual(self.d["total_headcount"], 1055)
+        self.assertEqual(self.d["total_posts"], 10)
+        self.assertTrue(self.d["totals_match"])
+
+    def test_window_and_process(self):
+        self.assertEqual(
+            self.d["application_window"],
+            {"start": "2026-11-18", "end": "2026-11-30"},
+        )
+        self.assertEqual(
+            self.d["process"],
+            ["网上报名", "网上资格审查与筛选", "网上测评", "资格复审", "考试考核", "公示录用"],
+        )
+        self.assertTrue(self.d["has_written_exam"])  # 考试考核
+        self.assertTrue(self.d["one_post_limit"])
+        self.assertTrue(self.d["birthplace_priority"])
+        self.assertEqual(self.d["contact_phone"], "027-51122511")
+
+    def test_power_supply(self):
+        ps = self.d["power_supply"]
+        self.assertEqual(ps["headcount"], 150)
+        self.assertEqual(
+            ps["units"],
+            {"襄阳供电段": 83, "武汉高铁基础设施段": 53, "宜昌综合维修段": 10, "襄州运营维修段": 4},
+        )
+
+    def test_eligible_for_railway_power_major(self):
+        # Only the power-supply row lists 铁道供电技术.
+        self.assertEqual(self.d["eligible_for_major"]["total_headcount"], 150)
+
+    def test_labelled_row_remarks(self):
+        rows = {r["code"]: r for r in self.d["posts"]}
+        self.assertEqual(
+            rows["WHJ2027CW0201"]["remarks"],
+            "适宜男性，身体条件符合《铁路机车车辆驾驶人员健康检查规范》",
+        )
+        self.assertIsNone(rows["WHJ2027YS0201"]["remarks"])
+
+    def test_row_unit_sums(self):
+        for row in self.d["posts"]:
+            known = [u["headcount"] for u in row["units"] if u["headcount"] is not None]
+            if known:
+                self.assertEqual(sum(known), row["headcount"], row["code"])
+
+
 if __name__ == "__main__":
     unittest.main()
